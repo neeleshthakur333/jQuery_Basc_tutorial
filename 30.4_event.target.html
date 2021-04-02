@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .box{
+            border: 2px solid purple;
+            padding: 0 10px;
+            background: rgb(211, 162, 211);
+            width: 350px;
+            height: 180px;
+            color: #000;
+        }
+    </style>
+    <title>event.target</title>
+</head>
+<body>
+    <h1>event.target Tutorial</h1>
+    <div class="box">
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex ipsam deleniti quam voluptate. Voluptates culpa a porro facilis. Ad, animi?</p>
+        <button>Button</button>
+    </div><br>
+    <h3></h3>
+    <script src="00_jQuery_src.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.box').click(function(){
+                $('h3').text('tag : '+event.target.innerHTML)            
+            });
+        });
+    </script>
+</body>
+</html>
