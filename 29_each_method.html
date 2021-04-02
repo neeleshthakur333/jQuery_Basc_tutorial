@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>each method</title>
+</head>
+<body>
+    <h1>Each Method in HTML</h1>
+    <ul>
+        <li>Banana</li>
+        <li>Apple</li>
+        <li>Orange</li>
+        <li>Purple</li>
+    </ul>
+    <script src="00_jQuery_src.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('li').each(function(){
+                $(this).text('Hello world');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #box{
+            width: 300px;
+            border: 2px solid black;
+            padding: 10px;    
+        }
+        .first{background: chocolate;}
+
+        .second{background: cornflowerblue;}
+    </style>
+    <title>Class Methods</title>
+</head>
+<body>
+    <div id="box">
+        <h1>This is class Methods Tutorial</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla sequi aperiam consequatur nihil voluptas possimus quod architecto eum in perferendis quam saepe ratione corrupti asperiores tenetur dolorum enim, labore hic. Et, quisquam quis porro ducimus aliquid iusto nemo laboriosam quasi delectus est fuga? Explicabo a fugiat, mollitia expedita in voluptate.</p>
+    </div><br/>    
+    <button class="add">Add Class</button>
+    <button class="remove">Remove Class</button>
+    <button class="toggle">Toggle Class</button>
+
+    <script src="00_jQuery_src.js"></script>
+    <script>
+        $(document).ready(function(){
+            // add two classes
+            $('.add').click(function(){
+                $('#box').addClass('first second')
+            });
+
+            // remove class
+            $('.remove').click(function(){
+                $('#box').removeClass('second ')
+            });
+
+            // toggle class
+            $('.toggle').click(function(){
+                $('#box').toggleClass('first')
+            });
+        });
+    </script>
+</body>
+</html>

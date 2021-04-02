@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .box{
+            border: 2px solid black;
+            width: 250px;
+            height: 150px;
+            text-align: center;
+            background: rgba(100, 148, 237, 0.481);
+            position: relative;
+        }
+    </style>
+    <title>Stop method</title>
+</head>
+<body>
+    <h1>Stop Method Tutorial</h1>
+    <div class="box">
+        <h2>Test</h2>
+    </div><br>
+    <button id='btnanimate'>Animate</button>
+    <button id='btnstop'>Stop</button>
+
+    <script src="00_jQuery_src.js"></script>
+    <script>
+        $(document).ready(function(){
+            // animate
+            $('#btnanimate').click(function(){
+                $('.box').animate({left:'150px'},3000);
+                $('.box').animate({fontSize:'30px'},3000);
+            });
+
+            // stop
+            $('#btnstop').click(function(){
+                $('.box').stop(true,true)
+            });
+        });
+    </script>
+</body>
+</html>

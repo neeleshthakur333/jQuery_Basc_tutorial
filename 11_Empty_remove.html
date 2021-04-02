@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .box{
+            border: 2px solid black;
+            width: 350px;
+            padding: 10px;
+        }
+    </style>
+    <title>Empty & remove </title>
+</head>
+<body>
+    <div class="box">
+        <h1>Empty & remove tutorial</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error impedit explicabo deleniti eius aut temporibus velit odio sunt iure illum quaerat quisquam laudantium doloribus commodi, porro laborum necessitatibus nihil rem!</p>
+    </div><br>
+    <button class='emptybutton'>Empty</button>
+    <button class='removebutton'>Remove</button>
+
+    <script src="00_jQuery_src.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Empty Method
+            $('.emptybutton').click(function(){
+                $('h1').empty();
+            });
+
+            // Remove Method
+            $('.removebutton').click(function(){
+                $('.box').remove();
+            });
+        });
+    </script>
+</body>
+</html>

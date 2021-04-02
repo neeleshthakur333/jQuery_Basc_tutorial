@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .box{
+            border: 2px solid black;
+            width: 350px;
+            padding: 0 10px;
+            background: tan;
+        }
+    </style>
+    <title>Slide Methods</title>
+</head>
+<body>
+    <h1>slideUp, slideDown & slideToggle</h1>
+    <div class="box">
+        <h2>Test</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo recusandae et ut in ipsam labore neque voluptatem nisi ab sapiente, enim maxime doloremque explicabo vitae placeat consequatur at rem ea!</p>
+    </div><br>
+    <button id='btnUp'>Slide Up</button>
+    <button id='btnDown'>Slide Down</button>
+    <button id='btnToggle'>Slide Toggle</button>
+
+    <script src="00_jQuery_src.js"></script>
+    <script>
+        $(document).ready(function(){
+            // slideUp
+            $('#btnUp').click(function(){
+                $('.box').slideUp('slow',function(){
+                    console.log('Div is hidden')
+                });
+            });
+
+            // slideDown
+            $('#btnDown').click(function(){
+                $('.box').slideDown('slow',function(){
+                    console.log('Div is Showen')
+                });
+            });
+
+            // slideToggle
+            $('#btnToggle').click(function(){
+                $('.box').slideToggle(2000,function(){
+                    console.log('div is toggle')
+                })
+            });
+        });
+    </script>
+</body>
+</html>

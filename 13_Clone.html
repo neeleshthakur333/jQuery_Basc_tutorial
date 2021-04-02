@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .box,.box2{
+            box-sizing: border-box;
+            border: 2px solid black;
+            width: 350px;
+            padding: 0 10px;
+        }
+        .box{background: chartreuse;}
+        .box2{background: rgb(255, 51, 0);color: rgb(255, 251, 233);}
+    </style>
+    <title>Clone Method</title>
+</head>
+<body>
+    <div class="box">
+        <h1>This is Clone Method</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum explicabo aliquam repellendus recusandae dolorum suscipit quos earum enim sequi veniam?</p>
+    </div><br>
+    <div class="box2">
+        <p>test box</p>
+    </div><br>
+    <button id='clonebutton'>Clone</button>
+
+    <script src="00_jQuery_src.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#clonebutton').click(function(){
+                $('.box h1').clone().prependTo('.box2');
+                $('.box p').clone().appendTo('.box2')
+            });
+        });
+    </script>
+</body>
+</html>

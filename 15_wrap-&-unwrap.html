@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <Style>
+        .box{
+            border: 2px solid;
+            width: 350px;
+            padding: 0 10px;
+            }
+    </Style>
+    <title>wrap & unwrap </title>
+</head>
+<body>  
+        <h1>Wrap and unwrap Tutorial</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic nemo nesciunt eaque maxime laborum animi perferendis tempora veniam totam eos?</p>
+        <br>
+    <button id=btnwrap>wrap</button>
+    <button id=btnunwrap>unwrap</button>
+    <script src="00_jQuery_src.js"></script>
+    <script>
+        $(document).ready(function(){
+            // wrap
+            $('#btnwrap').click(function(){
+                $('p').wrapAll('<div class="box"></div>');
+            });
+
+            // unwrap
+            $('#btnunwrap').click(function(){
+                $('p').unwrap()
+            });
+        });
+    </script>
+</body>
+</html>

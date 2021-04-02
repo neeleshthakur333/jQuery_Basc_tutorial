@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .box{
+            background-color: chartreuse;
+            border: 10px solid brown;
+            padding: 20px;
+            margin: 20px;
+        }
+    </style>
+    <title>width & height</title>
+</head>
+<body>
+    <div class="box">
+        <h1>Width and Height Tutorial</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste vero voluptatem magni suscipit et quisquam dolor, est ratione voluptatibus facere repudiandae nesciunt a provident deleniti dolore excepturi fugit quo ad.</p>
+    </div><br>
+    <button class="btnWidth">Width</button>
+    <button class="btnHeight">Height</button>
+
+    <script src="00_jQuery_src.js"></script>
+    <script>
+        $(document).ready(function(){
+            // width
+            $('.btnWidth').click(function(){
+                $('.box').width('300px')
+
+                console.clear();
+                console.log('width : ' + $('.box').width());
+                console.log('innerWidth : ' + $('.box').innerWidth());
+                console.log('outerWidth : ' + $('.box').outerWidth());
+                console.log('outerWidth(true) : ' + $('.box').outerWidth(true));
+            });
+
+            // height
+            $('.btnHeight').click(function(){
+                $('.box').height('300px');
+
+                console.clear();
+                console.log('height : '+ $('.box').height());
+                console.log('Innerheight : '+ $('.box').innerHeight());
+                console.log('outerheight : '+ $('.box').outerHeight());
+                console.log('outerheight(true) : ' + $('.box').outerHeight(true));
+            });
+        });
+    </script>
+</body>
+</html>

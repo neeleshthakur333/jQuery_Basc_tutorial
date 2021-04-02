@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .box {
+        border: 2px solid black;
+        padding: 0 10px;
+        width: 250px;
+        /* word-spacing: 20px; */
+        word-break: break-all;
+        background-color: rgba(0, 128, 128, 0.323);
+        position: relative;
+      }
+    </style>
+    <title>Animate Method</title>
+  </head>
+  <body>
+    <h1>Animate Method Tutorial</h1>
+    <div class="box">
+      <h2>Test</h2>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. In, distinctio
+        fuga reprehenderit, illum commodi repudiandae quibusdam fugiat dolor
+        error ratione eius eos, perferendis tempora atque quae tenetur!
+        Perferendis, quaerat nam.
+      </p>
+    </div>
+    <br />
+    <button id="btnanimate">Animate</button>
+
+    <script src="00_jQuery_src.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#btnanimate").click(function () {
+          $(".box").animate({left: "100px",width: "+=100px"},'slow',function(){console.log('callback function is activated')});
+          $(".box").animate({top:'100px'});
+          $(".box").animate({left:'500px'},2000);
+        });
+      });
+    </script>
+  </body>
+</html>

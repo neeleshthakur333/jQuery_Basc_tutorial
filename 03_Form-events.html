@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-event : jQuery </title>
+</head>
+<body>
+    <form id = fbox>
+        <label for="">Name : </label><input type="text" id='fname'><br/><br/>
+        <label for="">Age : </label><input type="text" id='fage'><br/><br/>
+
+        <label for="">Country : </label>
+        <select id=fcountry>
+            <option value="India">India</option>
+            <option value="Pakistan">Pakistan</option>
+            <option value="Sri Lanka">Sri Lanka</option>
+            <option value="Bangladesh">Bangladesh</option>
+            <option value="Nepal">Nepal</option>
+        </select>
+        <br/><br/>
+        <input type="submit" >
+    </form>
+    <br/>
+    <div id='test' style='border: 2px solid red;'></div>
+
+    <script src="00_jQuery_src.js" ></script>
+    <script>
+        $(document).ready(function(){
+            
+            // focus on all
+            $('#fname,#fage,#fcountry').focus(function(){
+                $(this).css('border','2px solid #865386');
+                $(this).css('background','#e2b6b6'); 
+            });
+
+            // blur on all
+            $('#fname,#fage,#fcountry').blur(function(){
+                $(this).css('background','');                
+            })
+
+            // change event : input
+            $('#fname').change(function(){
+                var a = $('#fname').val();
+                $('#test').html(a);
+            })
+
+            //change event : input
+            $('#fage').change(function(){
+                var b = $(this).val();
+                $('#test').html(b);
+            })
+
+            //change event : select
+            $('#fcountry').change(function(){
+                var s = $(this).val();
+                $('#test').html(s)
+            })
+
+            // submit event : form
+            $('#fbox').submit(function(){
+                alert('form submit')
+            })
+        })  
+    </script>
+</body>
+</html>

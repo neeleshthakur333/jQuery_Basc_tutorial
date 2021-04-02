@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .box{
+            width:300px;
+            border: 2px solid red;
+            padding: 0 10px;
+            background: rgb(96, 143, 25);
+            color: rgba(233, 233, 189, 0.885);
+        }
+    </style>
+    <title>Hide,show and toggle</title>
+</head>
+<body>
+    <h1>Hide,Show and Toggle tutorial</h1>
+    <div class="box">
+        <h2>test</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat odit eligendi doloremque corporis nostrum quisquam, quia soluta quos consectetur tenetur architecto rerum, earum harum error dolores modi nisi suscipit omnis!</p>
+    </div><br>
+    <button id='btnhide' >Hide</button>
+    <button id='btnshow' >Show</button>
+    <button id='btntoggle' >Toggle</button>
+
+    <script src="00_jQuery_src.js"></script>
+    <script>
+        $(document).ready(function(){
+            // hide
+            $('#btnhide').click(function(){
+                $('.box').hide('slow',function(){console.log('div is hidden')});
+            });
+
+            // show
+            $('#btnshow').click(function(){
+                $('.box').show('slow',function(){
+                    console.log('div is shown')
+                })
+            });
+
+            // toggle
+            $('#btntoggle').click(function(){
+                $('.box').toggle(1000)
+            });
+        });
+    </script>
+</body>
+</html>

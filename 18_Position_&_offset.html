@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{margin: 0;}
+        .box{
+            border: 2px solid black;
+            padding: 10px;
+            position: relative;
+        }
+        p{
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+    <title>Position and offset </title>
+</head>
+<body>
+    <!-- <h1>Position and offset tutorial</h1> -->
+    <div class="box">
+        <p >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem optio voluptatibus maxime inventore alias quam natus quos itaque neque labore, veniam nisi ut doloribus rem ipsa provident? Consequuntur, explicabo consequatur.</p>
+    </div><br>
+    <button id='btnposition'>Position</button>
+    <button id='btnoffset'>Offset</button>
+    <script src="00_jQuery_src.js"></script>
+    <script>
+        $(document).ready(function(){
+            // position
+            $('#btnposition').click(function(){
+                console.log($('p').position());
+            });
+
+            // offset
+            $('#btnoffset').click(function(){
+                console.log($('p').offset());
+            });
+        });
+    </script>
+</body>
+</html>

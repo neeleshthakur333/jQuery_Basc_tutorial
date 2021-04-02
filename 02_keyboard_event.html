@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .box{
+            border: 2px solid black;
+            width: 400px;
+            padding: 20px;
+            background: burlywood;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+
+    <title>jQuery keyword_event</title>
+</head>
+<body>
+    <div class="box" id='container'>
+        <h1>Press key</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque illo ipsum recusandae natus laboriosam tenetur voluptatum aperiam at et exercitationem.</p>
+    </div>
+
+    <script src="00_jQuery_src.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("body").keypress(function(){
+                $(this).css('background','green');
+            })
+
+            $("body").keyup(function(){
+                $(this).css('background','orange')
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Methods</title>
+</head>
+<body>
+    <div class="box">
+        <h1>CSS Methods Tutorial</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, voluptas eveniet, reiciendis culpa excepturi porro in sapiente quam temporibus optio impedit neque nam praesentium voluptatibus eaque consequuntur ad reprehenderit voluptatum!</p>
+    </div><br/>
+    <button class='change'>ADD CSS</button>
+
+    <script src="00_jQuery_src.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.change').click(function(){
+                $('.box').css({'background':'grey', 'color':'white','border':'2px dashed black','width':'300px','padding':'10px'})
+            });
+        });
+    </script>
+</body>
+</html>

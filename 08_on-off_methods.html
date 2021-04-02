@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .box{
+            /* box-sizing: border-box; */
+            border: 2px solid red;
+            padding: 10px;
+            width: 350px;
+        }
+        .bg{
+            background: greenyellow;
+        }
+    </style>
+    <title>on/off methods</title>
+</head>
+<body>
+    <div class="box">
+        <h1>This is on/off Methods tutorial</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis quas officia fuga eligendi vero praesentium cupiditate incidunt enim totam voluptates? Ipsum tempore molestiae blanditiis non culpa optio dicta iure tenetur?</p>
+    </div><br/>
+    <button id='rbutton'> Remove event</button>
+
+    <script src="00_jQuery_src.js"></script>
+    <script>
+        $(document).ready(function(){
+            // single events in on methods
+            // $('.box').on('click',function(){
+            //     $(this).css({'background':'tan','color':'cornsilk'});
+            // });
+
+            // toogle class with on methods
+            // $('.box').on('mouseover mouseout', function(){
+            //     $(this).toggleClass('bg');
+            // });
+
+            // on methods and multi events
+            $('.box').on({
+                //click
+                'click':function(){
+                    $(this).css('background','tan');
+                },
+
+                //mouseover
+                'mouseover':function(){
+                    $(this).css('background','yellowgreen');
+                },
+
+                //mouseout
+                'mouseout':function(){
+                    $(this).css('background','hotpink')
+                } 
+            });
+
+            // off method
+            $('#rbutton').click(function(){
+                $('.box').off('mouseover mouseout')
+            });
+        });
+    </script>
+</body>
+</html>

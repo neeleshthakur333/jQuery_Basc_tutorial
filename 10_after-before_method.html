@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .box{
+            border: 2px solid black;
+            width: 300px;
+            padding: 0 10px;
+        }
+    </style>
+    <title>After & before method</title>
+</head>
+<body>
+    <div class="box">
+        <h2>After and Before tutorial</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea saepe esse amet quasi quisquam laborum, ab rem, debitis inventore illum voluptatibus modi sit repudiandae veritatis accusamus odit commodi, dolorem temporibus!</p>
+    </div><br>
+    <button id='afterBox'>After</button>
+    <button id='beforeBox'>Before</button>
+
+    <script src="00_jQuery_src.js"></script>
+    <script>
+        $(document).ready(function(){
+            // after method
+            $('#afterBox').click(function(){
+                $('.box').after('<h3>After Method : active</h3><p>this is test</p>')
+            });
+
+            // before method
+            $('#beforeBox').click(function(){
+                $('.box').before('<h1>Before div</h1>')
+            });
+        });
+    </script>
+</body>
+</html>

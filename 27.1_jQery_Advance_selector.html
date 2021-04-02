@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .mainOuter{
+            border: 2px solid black;
+            background: lightgreen;
+            padding: 10px;
+            height: 400px;
+            position: relative;
+        }
+        .outer{
+            border: 2px solid black;
+            background: lightsalmon;
+            height: 300px;
+            padding: 10px;
+        }
+        .inner{
+            border: 2px solid black;
+            background: lightskyblue;
+            padding: 10px;
+            height: 200px;
+            
+        }
+        .inner div{
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            float: left;
+            margin:  0 20px;
+            text-align: center;
+            background: cornsilk;
+            padding: 40px 0;
+            box-sizing: border-box;
+        }
+
+    </style>
+    <title>jQuery Ancestor Methods</title>
+</head>
+<body>
+    <h1>jQuery Advance Selector : Ancestor Methods</h1>
+    <div class="mainOuter">
+        <h2>Main Outer</h2>
+        <div class="outer">
+            <h2>Outer</h2>
+            <div class="inner">
+                <h2>Inner</h2>
+                <div>A</div>
+                <div>B</div>
+                <div class='inner-c'>C</div>
+                <div>D</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="00_jQuery_src.js"></script>
+    <script>
+        $(document).ready(function(){
+            // parent
+            $('.inner-c').parent().css('background','red');
+
+            // parents
+            $('.inner-c').parents().css('background','orange');
+
+            // parents(significant selector)
+            $('.inner-c').parentsUntil('.outer').css('background','blue');
+
+            // offsetparent + position
+            $('.outer').offsetParent().css('background','purple');
+
+            // closest(selector)
+            $('.inner-c').closest('div').css('background','red')
+        });
+    </script>
+</body>
+</html>

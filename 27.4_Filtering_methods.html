@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .first{
+            border: 2px solid rgb(216, 152, 69);
+            background-color: rgb(231, 209, 181);
+            padding: 0 10px;
+        }
+        .second{
+            border: 2px solid blue;
+            background: rgb(169, 169, 233);
+            padding: 0 10px;
+        }
+        ul{list-style: none;
+        font-size: 20px;}
+    </style>
+    <title>Filtering Method</title>
+</head>
+<body>
+    <h1>Filtering Method Tutorial</h1>
+    <div class="first">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate nulla perspiciatis veritatis rerum, pariatur voluptatum quae voluptatibus nobis perferendis nisi dolore quisquam maxime ad unde ipsam. Tenetur totam nobis nihil.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate nulla perspiciatis veritatis rerum, pariatur voluptatum quae voluptatibus nobis perferendis nisi dolore quisquam maxime ad unde ipsam. Tenetur totam nobis nihil.</p>
+    </div>
+    <ul>
+        <li>Orange</li>
+        <li>Apple</li>
+        <li>Mango</li>
+        <li>Banana</li>
+    </ul>
+    <div class="second">
+        <p class='test'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste sit eligendi asperiores recusandae modi! Neque architecto accusamus voluptate eaque illum dignissimos sint, repellat, atque impedit magnam excepturi nobis. Doloribus, beatae?</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste sit eligendi asperiores recusandae modi! Neque architecto accusamus voluptate eaque illum dignissimos sint, repellat, atque impedit magnam excepturi nobis. Doloribus, beatae?</p>
+    </div>
+
+    <script src="00_jQuery_src.js
+    "></script>
+    <script>
+        $(document).ready(function(){
+            // first Method
+            $('p').first().css('background','hotpink')
+            // first Method
+            $('.second p').first().css('background','hotpink')
+
+            // last Method
+            $('p').last().css('background','gold')
+
+            // eq() method
+            $('ul li').eq(-1).css('background','orange')
+
+            // filter method
+            $('p').filter('.test').css('background','red');
+
+            // not method
+            $('p').not('.test').css('background','lightgreen')
+
+            // slice method
+            $('ul li ').slice(0,2).css('background','brown');
+        });
+    </script>
+</body>
+</html>

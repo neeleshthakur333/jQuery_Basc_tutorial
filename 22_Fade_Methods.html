@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .box{
+            box-sizing: border-box;
+            border: 2px solid black;
+            width: 350px;
+            padding: 0 10px;
+            background: lightblue;
+        }
+        h3{text-align: center;font-size: 25px;
+        margin: 0;}
+    </style>
+    <title>Fade Methods</title>
+</head>
+<body>
+    <h2>fadeIn, fadeOut, fadeToggle, fadeTo Tutorial</h2>
+    <div class="box">
+        <h3>Test</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia, sunt ullam provident explicabo vitae minima, cumque numquam impedit molestiae quisquam repellat animi aliquam facilis libero? Impedit voluptate placeat quisquam aperiam?</p>
+    </div><br>
+    <button id ='btnOut'>Fade Out</button>
+    <button id ='btnIn'>Fade In</button>
+    <button id ='btnToggle'>Fade Toggle</button>
+    <button id ='btnTo'>Fade To</button>
+
+    <script src="00_jQuery_src.js"></script>
+    <script>
+        $(document).ready(function(){
+            // fadeOut
+            $('#btnOut').click(function(){
+                $('.box').fadeOut(3000,function(){
+                    console.log('Fade Out')
+                });
+            });
+
+            // fadeIn
+            $('#btnIn').click(function(){
+                $('.box').fadeIn(3000,function(){console.log('Fade In')});
+            });
+
+            // fadeToggle
+            $('#btnToggle').click(function(){
+                $('.box').fadeToggle(2000,function(){
+                    console.log('Fade Toggle')
+                });
+            });
+
+            // fadeTo
+            $('#btnTo').click(function(){
+                $('.box').fadeTo(1000,0)
+            });
+        });
+    </script>
+</body>
+</html>

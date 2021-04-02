@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .box{
+            border: 2px solid black;
+            padding: 0 10px;
+            width: 350px;
+        }
+    </style>
+    <title>appendTo & prependTo</title>
+</head>
+<body>
+    <div class="box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam fugiat fugit culpa sint saepe sequi delectus iste illo ut hic!</p>
+    </div><br>
+    <button class='appendbutton'>AppendTo</button>
+    <button class='prependbutton'>PrependTo</button>
+
+    <script src="00_jQuery_src.js"></script>
+    <script>
+        $(document).ready(function(){
+            //appendTo
+            $('.appendbutton').click(function(){
+                $('<h3><i>The End</i></h3>').appendTo('.box')
+            });
+
+            // prependbutton
+            $('.prependbutton').click(function(){
+                $('<h1>This is appendTo & prependTo tutorial</h1>').prependTo('.box')
+            });
+        });
+    </script>
+</body>
+</html>

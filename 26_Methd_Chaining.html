@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .box{
+            border: 2px solid black;
+            width: 350px;
+            padding: 0 10px;
+            word-break: break-all;
+            background-color: cornflowerblue;
+            color: rgb(250, 245, 223);
+        }
+    </style>
+    <title>chaining Method</title>
+</head>
+<body>
+    <h1>Method Chaining Tutorial</h1>
+    <div class="box">
+        <h2>Test</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id, facilis sint atque quos et rerum nesciunt sit voluptatem modi! Obcaecati veniam est illum quae vero odit impedit eveniet, quibusdam sapiente?</p>
+    </div><br>
+    <button id='btnanimate'>Animate</button>
+
+    <script src="00_jQuery_src.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#btnanimate').click(function(){
+                $('.box').css({'background': 'orange','color':'black'}).slideUp(3000).slideDown(3000);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            box-sizing: border-box;margin: 0;
+        }
+
+        .box{            
+            border: 2px solid black;
+            padding: 10px;
+            width: 300px;
+            margin: 0 10px;
+            background: brown;
+            color: burlywood;
+        }
+        #cbutton{margin: 10px 10px ;}
+
+        .red{color: red;}
+    </style>
+    <title>Set methods</title>
+</head>
+
+<body>
+    <div class="box">
+        <h1 >Lorem ipsum dolor sit amet.</h1>
+        <p id='para'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi corrupti amet, distinctio, necessitatibus molestias nisi adipisci totam eaque, unde a soluta dolor reprehenderit veniam alias accusamus numquam dolores? Cupiditate a hic sed placeat corrupti quam doloribus laborum rerum quod voluptate. Tempora itaque debitis nisi dicta enim deleniti, sapiente quae est?</p>
+    </div>
+    <button id="cbutton">change</button>
+
+    <script src="00_jQuery_src.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#cbutton').click(function(){
+                // text
+                $('.box h1').text('Hello world');
+                // text
+                $('.box #para').text('this is paragraph');
+
+                // html
+                $('.box p').html('this is <i>para</i>');
+
+                // attr
+                $('.box h1').attr('class','red')
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window events</title>
+    <style>
+        #box{
+            border: 2px solid red;
+            width: 300px;
+            height: 300px;
+            padding: 5px;
+            overflow: auto;
+            background: rgb(234, 204, 204);
+        }
+    </style>
+</head>
+<body>
+    <div id="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur quos explicabo repudiandae quaerat, molestiae, porro quam quisquam blanditiis, beatae ex magnam minima nihil amet debitis cupiditate quae enim. Laboriosam quidem eos maxime, nesciunt modi vitae aliquid totam odio hic impedit? Optio obcaecati voluptates itaque est explicabo repudiandae porro maiores amet! Unde totam minima provident molestias earum sit voluptatem reiciendis animi expedita consequatur vitae iste delectus nemo, facilis eveniet laborum explicabo laudantium suscipit repellat tenetur et id rem tempore reprehenderit. Libero alias aspernatur obcaecati hic enim in animi ducimus voluptatibus magnam vitae iusto odit aperiam, velit aliquam vero dignissimos iure asperiores, nobis nesciunt ea! Quo fugit nostrum aut deserunt provident. Nulla, dolore! Molestias officiis, alias, asperiores perspiciatis magni tenetur sint blanditiis velit suscipit vitae numquam assumenda pariatur vero id odit similique ratione recusandae? Commodi nam natus molestiae inventore, temporibus doloremque ipsam quasi porro cupiditate consectetur voluptas corporis quas delectus? Molestias, ea!</div>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum natus neque soluta perspiciatis blanditiis itaque! Aliquam deleniti at eligendi commodi? Reprehenderit, voluptatem dolore! Mollitia, voluptatem deserunt! Sint quae, eius nulla ullam, cumque asperiores fuga vel porro aspernatur quod odit iusto ipsa delectus quia alias magni consectetur, doloribus facere. Aut, molestias perspiciatis id deleniti vero magni voluptatem dicta animi facere suscipit nobis et sed itaque nostrum. Delectus adipisci itaque laborum est sunt dolore obcaecati. Quisquam accusantium id et nulla, corrupti praesentium commodi laudantium eligendi. Aliquam dignissimos doloribus eaque unde repudiandae maiores tenetur aut quas rerum quisquam illo officia voluptatem accusantium cum quaerat recusandae sunt nulla ab aperiam culpa voluptates rem, numquam cupiditate ratione. Fuga quidem error atque velit distinctio accusantium porro nisi! Ipsam expedita illum neque culpa. Animi velit iste necessitatibus dolorem cupiditate autem nulla distinctio quos magni saepe voluptates cumque quasi unde qui iusto provident, facilis, a dolor adipisci earum ratione atque nihil explicabo eos. Nisi sint sequi delectus! Minima voluptatem quia consequatur quis, corporis numquam rem magni ab sed porro dolorem veniam laudantium quibusdam quam odit itaque qui quaerat sapiente ipsam! Aspernatur odio delectus esse minima accusantium maxime molestias laboriosam. Ut iusto repellat modi pariatur blanditiis ipsam in eligendi et nihil sequi veniam voluptatum rem officia, illo minus facere tenetur quis fugiat amet, harum ad molestias! Qui minima doloremque quasi alias omnis ipsum reiciendis nam totam fugiat aliquam. Provident at ab maiores quia numquam rem quisquam nisi error molestias reprehenderit, a quidem officia, explicabo tenetur veritatis asperiores nulla dolorum culpa incidunt adipisci labore. Natus beatae molestiae eaque dolorum consequuntur dolorem incidunt nam ea saepe suscipit voluptatum, laudantium accusamus facilis minima obcaecati est facere debitis quidem eius? Repudiandae, aspernatur. Dignissimos, labore reprehenderit facilis quas id doloribus sunt officiis officia possimus fugiat adipisci repudiandae nesciunt excepturi rem vitae ipsa quibusdam! Nesciunt odit exercitationem maxime numquam minima cumque, amet quibusdam facilis, ut velit, error quisquam sed quae earum architecto doloremque nihil porro fugiat assumenda ex rem alias eveniet hic quasi! Exercitationem quidem necessitatibus, fugit tempore rerum numquam aspernatur tenetur assumenda nobis laboriosam explicabo, velit esse, ut deleniti reprehenderit? Velit doloremque ab error fugiat nemo est obcaecati eligendi recusandae illum eaque, labore saepe fugit id pariatur quam veritatis blanditiis? Aut illo dolores corrupti nam accusamus nulla cum magni illum, earum, officia officiis veritatis sunt pariatur doloribus laudantium autem. Cupiditate et animi pariatur ipsum esse officiis, optio ratione asperiores, incidunt dolor, nobis neque inventore suscipit quis natus? Eaque neque dolores vero aut, quam dolorum enim harum expedita molestias iste asperiores quia nulla voluptates nihil ipsam consequuntur iure quis eligendi totam sequi sit facilis dolorem laudantium? Cupiditate ullam porro, vel vero odio, in quaerat pariatur beatae illum sit unde? Quod architecto quisquam eligendi laborum totam fugiat excepturi exercitationem eos aut, esse obcaecati numquam odit quia porro quae cupiditate? Magni repellat praesentium, fugit neque voluptatum voluptates assumenda voluptas blanditiis rerum ipsum quas laborum! Voluptatem recusandae nemo rem dolores cumque eaque? Assumenda, quae, odio officiis dicta magnam accusantium quam unde earum iste iure exercitationem molestiae minus aperiam!</p>
+
+    <script src="00_jQuery_src.js"></script>
+    <script>
+        $(document).ready(function(){
+            // scroll event
+            $(window).scroll(function(){
+                console.log('you are scrolling');
+            });
+
+            // resize event
+            $(window).resize(function(){
+                console.log('you are resizeing')
+            })
+        });
+    </script>
+</body>
+</html>

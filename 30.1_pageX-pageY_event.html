@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .box{
+            border: 2px solid blueviolet;
+            width : 250px;
+            height: 150px;
+            background: lightblue; 
+            margin: auto;
+        }
+        .box1{
+            border: 2px solid brown;
+            width: 50px;
+            height: 50px;
+            background: rgb(237, 149, 149);
+            /* position: relative; */
+        }
+    </style>
+    <title>pageX and pageY</title>
+</head>
+<body>
+    <h1>pageX and pageY Tutorial</h1>
+    <div class="box"></div>
+    <div class="box1"></div>
+
+    <script src="00_jQuery_src.js"></script>
+    <script>
+        $(document).ready(function(){
+            // pageX and pageY
+            $(document).mousemove(function(event){$('.box').html('pageX : ' + event.pageX + '<br>' + 'pageY : '+ event.pageY)
+        
+             // pageX and pageY
+             var X = event.pageX;
+            var Y = event.pageY;
+            $('.box1').offset({top:Y,left:X});
+        });
+        });
+    </script>
+</body>
+</html>

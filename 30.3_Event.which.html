@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .box{
+            border: 2px solid blueviolet;
+            width: 250px;
+            height: 150px;
+            background: rgb(192, 161, 221);
+        }
+    </style>
+    <title>Event.which </title>
+</head>
+<body>
+    <h1>event.which Tutorial</h1>
+    <div class="box"></div><br>
+    <input type="text" id='write'><br>
+    <h2></h2>
+
+    <script src="00_jQuery_src.js"></script>
+    <script>
+        $(document).ready(function(){
+            // event.which on mouse
+            $('.box').on('mouseover mousedown mouseout',function(event){
+                $('h2').html(event.type + ' : '+ event.which);
+            });
+
+            // event.which on keyword
+            $('#write').on('keydown',function(event){
+                $('h2').html(event.type + ' : '+ event.which);
+            });
+        });
+    </script>
+</body>
+</html>

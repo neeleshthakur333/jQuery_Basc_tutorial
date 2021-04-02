@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .box{
+            border: 2px solid brown;
+            background: rgb(214, 171, 171);
+            padding: 0 10px;
+            color: rgb(252, 250, 234);
+        }
+    </style>
+    <title>has & is Method</title>
+</head>
+<body>
+    <h1>has and is tutorial </h1>
+    <div class="box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.   <b>Magnam similique, laboriosam sapiente iste </b> ipsum omnis?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio nam rem ipsam id sint illum! Veritatis, illo dolor voluptatem, quasi minus asperiores eveniet, corrupti vel est in doloremque ab officiis?</p>
+    </div>
+    <ul>
+        <li>orange</li>
+        <li>apple</li>
+        <li class='banana'>banana</li>
+        <li>guava</li>
+    </ul>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum fugit voluptatibus veniam omnis deleniti, repellat doloremque perferendis consequatur quibusdam amet magni tenetur numquam ipsa cumque aliquid earum soluta iste commodi.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <span class='test'>Saepe similique beatae amet</span>  expedita recusandae reiciendis?</p>
+
+    <script src="00_jQuery_src.js"></script>
+    <script>
+        $(document).ready(function(){
+            // has
+            $('p').has('span').css('background','red')
+            // has
+            $('p').has('.test').css('background','blue');
+            // has
+            $('p').has('b').css('background','gold');
+
+            // is
+            if($('p').parent().is('.box')){
+                console.log($('p').parent().is('div'))
+            }
+            // is
+            if($('p').children().is('b')){
+                console.log($('p').parent().is('div'))
+            }
+            // is
+            if($('ul').children().is('.banana')){
+                $('.banana').css('background','red')
+            }
+        });
+    </script>
+</body>
+</html>
