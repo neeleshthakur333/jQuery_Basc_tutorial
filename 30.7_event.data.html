@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .box{
+            border: 2px solid black;
+            padding: 0 10px 10px;
+            background: thistle;
+        }
+    </style>
+    <title>Event Data</title>
+</head>
+<body>
+    <h1>Event Data</h1>
+    <div class="box">
+        <h2>Test</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque maxime quam voluptatem ea necessitatibus explicabo beatae harum optio dolorem officia ipsa dolores odit iusto voluptatibus tenetur quibusdam architecto, alias fuga.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque maxime quam voluptatem ea necessitatibus explicabo beatae harum optio dolorem officia ipsa dolores odit iusto voluptatibus tenetur quibusdam architecto, alias fuga.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque maxime quam voluptatem ea necessitatibus explicabo beatae harum optio dolorem officia ipsa dolores odit iusto voluptatibus tenetur quibusdam architecto, alias fuga.</p>
+    </div>
+
+    <script src="00_jQuery_src.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('p').each(function(i){
+                $(this).on('click',{value:i},function(event){
+                    // event.data
+                    alert('para number : '+ event.data.value);
+                })
+            });
+        });
+    </script>
+</body>
+</html>
