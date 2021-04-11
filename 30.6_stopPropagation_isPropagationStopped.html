@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .box{
+            border: 2px solid black;
+            padding: 0 10px 10px;
+            background: rgb(216, 196, 171);
+        }
+    </style>
+    <title>stopPropagation and isPropagationStopped</title>
+</head>
+<body>
+    <h1>stopPropagation an isPropagationStopped</h1>
+    <div class="box">
+        <h2>Test</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente voluptate earum explicabo labore adipisci, neque cumque enim sint quidem veritatis pariatur amet illum, dolores sunt deleniti fugit hic culpa consectetur?</p>
+        <button>Button</button>
+    </div>
+    <script src="00_jQuery_src.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.box').click(function(){
+                alert('this is Div element');
+            })
+
+            // stopPropagation and isPropagationStopped
+            $('h2').click(function(event){
+                event.stopPropagation();
+                alert('this is h1 element : '+ event.isPropagationStopped());
+            })
+
+            $('p').click(function(){
+                event.stopPropagation();
+                alert('this is p element');
+            })
+
+            // isPropagationStopped
+            $('button').click(function(event){
+                alert('this is button element : '+ event.isPropagationStopped());
+            })
+        });
+    </script>
+</body>
+</html>
